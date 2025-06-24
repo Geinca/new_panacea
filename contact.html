@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | New Panacea Hospital</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Header Top -->
+  <header class="header-top">
+    <div class="logo">
+      <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/New-Project-24.png" alt="New Panacea Hospital Logo">
+      
+    </div>
+    <div class="header-info">
+      <span><i class="fa-solid fa-location-dot"></i> Debpukur, Barrackpore</span>
+      <span><i class="fa-solid fa-phone"></i> 033-25938794, 6291140814, 8240050422</span>
+      <span><i class="fa-regular fa-calendar-check"></i> Book an Appointment</span>
+      <span class="social-icons">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+      </span>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <!-- Hamburger Icon -->
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+    
+    <!-- Nav links -->
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="departments.html">Department</a></li>
+      <li><a href="#">Facilities</a></li>
+      <li><a href="#">Doctors</a></li>
+      <li><a href="#">Hospital Videos</a></li>
+      <li><a href="#">Excellence</a></li>
+      <li><a href="#">Career</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-section">
+    <!-- Left Side Info -->
+    <div class="contact-info">
+      <div class="info-card">
+        <h4>Address line</h4>
+        <p>Debpukur, Barrackpore</p>
+      </div>
+      <div class="info-card">
+        <h4>Phone Number</h4>
+        <p>033-25938794<br>9051500312<br>8240050422</p>
+      </div>
+      <div class="info-card">
+        <h4>Opening Hours</h4>
+        <p>Monday - Friday<br>09:00 AM - 05:00 PM</p>
+      </div>
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="contact-form">
+      <h2>Send us a Message :</h2>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Enter your Name">
+          <input type="email" placeholder="Enter your mail">
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Enter your number">
+          <input type="text" placeholder="Enter your website">
+        </div>
+        <textarea placeholder="Type your comment"></textarea>
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+
+      <!-- Embedded Google Map -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Debpukur,%20Barrackpore,%20West%20Bengal&output=embed"
+          width="100%"
+          height="250"
+          frameborder="0"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

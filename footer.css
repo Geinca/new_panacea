@@ -1,0 +1,17 @@
+/* styles/footer.css */
+.site-footer {
+    background-color: #00a000;
+    /* Green background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 4px solid #009000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
