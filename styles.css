@@ -21,37 +21,45 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .logo img {
     height: 50px;
 }
-
 .header-info {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    text-align: right;
-    font-size: 14px;
-}
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; }
 
 .header-info i {
     margin-right: 5px;
 }
 
+.social-icons {
+    margin-top: 5px;
+}
+
 .social-icons i {
     font-size: 18px;
     margin-left: 10px;
+    color: #00a000;
 }
 
 /* Navbar */
 .navbar {
     background: #00a000;
-    text-align: center;
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 12px 20px;
+    display: none;
+    width: 100%;
+    text-align: left;
 }
 
 .navbar ul {
@@ -59,6 +67,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar ul li a {
@@ -72,42 +82,42 @@ body {
 .navbar ul li a:hover {
     background-color: #008800;
 }
-/* Toggle Button Styles */
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-    /* hidden on large screens */
-    padding: 10px 20px;
-}
 
-/* Initially hide the navbar links on small screens */
+/* Responsive Styles */
 @media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-info {
+        text-align: left;
+        width: 100%;
+    }
+
     .menu-toggle {
         display: block;
     }
 
     .navbar ul {
+        display: none;
         flex-direction: column;
         width: 100%;
-        display: none;
-        /* hide by default */
         background: #00a000;
-        padding: 0;
-        margin: 0;
     }
 
     .navbar ul.show {
         display: flex;
-        /* show when toggled */
     }
 
     .navbar ul li {
-        border-bottom: 1px solid #008800;
-        text-align: center;
+        border-top: 1px solid #008800;
+        text-align: left;
+    }
+
+    .navbar ul li a {
+        padding: 15px 20px;
     }
 }
 
@@ -537,6 +547,7 @@ h2 {
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: white;
 }
 
 .cta-button {

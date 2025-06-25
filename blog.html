@@ -1,38 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Blog - New Panacea Hospital</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="blog.css">
+  <meta charset="UTF-8" />
+  <title>New Panacea Hospital - Microbiology</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 <body>
-  <div class="container">
-    <div class="main-blog">
-      <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/microbiologist-2048x1365.jpg" alt="Microscope" class="blog-image">
 
-      <div class="blog-meta">
-        <span>🏥 HOSPITAL</span>
-        <span>📅 March 5, 2025</span>
-        <span>💬 NO COMMENTS</span>
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Content Section -->
+    <article class="content">
+      <img
+        src="https://newpanaceahospital.com/wp-content/uploads/2025/03/microbiologist-2048x1365.jpg"
+        alt="Microscope"
+        class="main-image"
+      />
+
+      <div class="meta-info">
+        <span>Hospital</span> |
+        <span>March 5, 2025</span> |
+        <span>No comments</span>
       </div>
 
-      <h2 class="blog-title">Microbiology</h2>
+      <p>Microbiology is the branch of science that studies microscopic organisms...</p>
 
-      <p class="blog-desc">
-        Microbiology is the branch of science that studies microscopic organisms, including bacteria, viruses, fungi, and protozoa. These tiny life forms play a significant role in our environment, health, and industries. From beneficial microbes that help in digestion to harmful pathogens that cause diseases, microbiology is essential for understanding life at a microscopic level. Branches of […]
-      </p>
+      <!-- Branches of Microbiology -->
+      <h2>Branches of Microbiology</h2>
+      <ol>
+        <li><strong>Bacteriology</strong> – The study of bacteria and their role...</li>
+        <li><strong>Virology</strong> – The study of viruses...</li>
+        <li><strong>Mycology</strong> – The study of fungi...</li>
+        <li><strong>Parasitology</strong> – The study of parasites...</li>
+        <li><strong>Immunology</strong> – The study of the immune system...</li>
+        <li><strong>Industrial Microbiology</strong> – The use of microbes in industries...</li>
+      </ol>
 
-      <a href="#" class="read-more">READ MORE</a>
-    </div>
+      <!-- Importance of Microbiology -->
+      <h2>Importance of Microbiology</h2>
+      <h3>1. Medical Microbiology</h3>
+      <p>Microbiology helps in diagnosing and treating infectious diseases...</p>
 
+      <h3>2. Environmental Microbiology</h3>
+      <p>Microorganisms play a crucial role in decomposing waste...</p>
+
+      <h3>3. Industrial Applications</h3>
+      <p>Microbes are used in food production, brewing, and pharmaceuticals...</p>
+
+      <h3>4. Agricultural Benefits</h3>
+      <p>Beneficial bacteria help in nitrogen fixation, improving soil fertility...</p>
+
+      <h3>Role of Microorganisms in Human Health</h3>
+      <p>While some microbes cause diseases like tuberculosis, pneumonia, and COVID-19...</p>
+
+      <h3>Advancements in Microbiology</h3>
+      <p>With the advent of molecular biology and genetic engineering, microbiology has expanded into fields like synthetic biology...</p>
+
+      <h3>Conclusion</h3>
+      <p>Microbiology is a fascinating field that impacts nearly every aspect of life...</p>
+
+      <!-- Comment Section -->
+      <section class="comment-section">
+        <h2>Leave a Reply</h2>
+        <p>Your email address will not be published. Required fields are marked *</p>
+
+        <form class="comment-form">
+          <div class="row">
+            <input type="text" placeholder="Enter your name *" required />
+            <input type="email" placeholder="Enter your email *" required />
+          </div>
+          <input type="url" placeholder="Enter your website" class="full-width" />
+          <textarea placeholder="Enter your comments" class="full-width" required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+      </section>
+    </article>
+
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="search-box">
-        <input type="text" placeholder="Search..." />
-        <button>Search</button>
+
+      <!-- Search Widget -->
+      <div class="widget search-widget">
+        <input type="search" placeholder="Search..." />
       </div>
 
-      <div class="sidebar-section">
+      <!-- Recent Posts Widget -->
+      <div class="widget recent-posts">
         <h3>Recent Posts</h3>
         <ul>
           <li>Microbiology</li>
@@ -43,37 +109,67 @@
         </ul>
       </div>
 
-      <div class="sidebar-section">
-        <h3>Recent Comments</h3>
-        <p>No comments to show.</p>
-      </div>
-
-      <div class="sidebar-section">
+      <!-- Archives Widget -->
+      <div class="widget archives">
         <h3>Archives</h3>
         <p>March 2025</p>
       </div>
-    </aside>
-    
-  </div>
-  <div class="blog-card">
-    <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/doctor-getting-patient-ready-ct-scan-2048x1365.jpg" alt="CT Scan" class="blog-card-img" />
-  
-    <div class="blog-card-meta">
-      <span><i class="fa-solid fa-user"></i> HOSPITAL</span>
-      <span><i class="fa-solid fa-calendar-days"></i> March 5, 2025</span>
-      <span><i class="fa-regular fa-comments"></i> NO COMMENTS</span>
-    </div>
-  
-    <h2 class="blog-card-title">CT Scan</h2>
-  
-    <p class="blog-card-desc">
-      What is a CT Scan? A Computed Tomography (CT) scan is a medical imaging technique that combines multiple X-ray images to create detailed cross-sectional images of the body. It provides a more detailed view than standard X-rays, allowing doctors to examine bones, organs, blood vessels, and soft tissues with high precision. How Does a CT […]
-    </p>
-  
-    <a href="#" class="blog-read-more">READ MORE</a>
-  </div>
-  
 
- 
+      <!-- Categories Widget -->
+      <div class="widget categories">
+        <h3>Categories</h3>
+        <p>Blog</p>
+      </div>
+
+      <!-- Search Widget -->
+      <div class="widget search-widget">
+        <h3>Search</h3>
+        <div class="search-box">
+          <input type="text" placeholder="Search Post" />
+          <button type="submit">🔍</button>
+        </div>
+      </div>
+
+      <!-- Category Widget -->
+      <div class="widget category-widget">
+        <h3>Category</h3>
+        <p>Blog (5)</p>
+      </div>
+
+      <!-- Recent Post Widget with Images -->
+      <div class="widget recent-post-widget">
+        <h3>Recent Post</h3>
+        <ul>
+          <li>
+            <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/microbiologist-300x300.jpg" alt="Microbiology" />
+            <div>
+              <span>March 05, 2025</span><br />
+              Microbiology
+            </div>
+          </li>
+          <li>
+            <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/doctor-getting-patient-ready-ct-scan-300x300.jpg" alt="CT Scan" />
+            <div>
+              <span>March 05, 2025</span><br />
+              CT Scan
+            </div>
+          </li>
+          <li>
+            <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/surgeon-300x300.jpg" alt="General Surgery" />
+            <div>
+              <span>March 05, 2025</span><br />
+              General Surgery
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>

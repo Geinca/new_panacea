@@ -27,8 +27,21 @@ if (slides.length > 0) {
 
 // Toggle Mobile Menu
 function toggleMenu() {
-  document.getElementById('nav-links').classList.toggle('show');
+  const navLinks = document.getElementById("nav-links");
+  const menuIcon = document.getElementById("menu-icon");
+
+  navLinks.classList.toggle("show");
+
+  // Toggle icon between bars and cross
+  if (navLinks.classList.contains("show")) {
+    menuIcon.classList.remove("fa-bars");
+    menuIcon.classList.add("fa-times");
+  } else {
+    menuIcon.classList.remove("fa-times");
+    menuIcon.classList.add("fa-bars");
+  }
 }
+
 
 // Include Footer
 fetch('footer.html')
