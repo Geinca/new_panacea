@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.career-section {
+    max-width: 500px;
+    margin: 60px auto;
+    background: #f1f1f1;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.career-subtitle {
+    color: #1d1365;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 2px solid #1d1365;
+    width: fit-content;
+    margin: 0 auto 10px auto;
+}
+
+.career-title {
+    color: #1d1365;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.career-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.career-form label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.career-form input,
+.career-form textarea {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.career-form textarea {
+    resize: vertical;
+}
+
+.apply-btn {
+    background-color: #088c1f;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Hover effect */
+.apply-btn:hover {
+    background-color: #066e19;
+}
+
+/* 🔁 Responsive Layout */
+@media screen and (max-width: 600px) {
+    .career-section {
+        padding: 30px 20px;
+        margin: 30px 10px;
+    }
+
+    .career-title {
+        font-size: 22px;
+    }
+
+    .career-subtitle {
+        font-size: 12px;
+    }
+
+    .career-form label {
+        font-size: 13px;
+    }
+
+    .career-form input,
+    .career-form textarea {
+        font-size: 14px;
+    }
+}

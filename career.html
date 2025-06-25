@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Career - New Panacea Hospital</title>
+  <link rel="stylesheet" href="career.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<div id="header"></div>
+
+  <div class="career-section">
+    <h5 class="career-subtitle">FILL HERE</h5>
+    <h2 class="career-title">Career</h2>
+
+    <form class="career-form" enctype="multipart/form-data">
+      <label>Full Name</label>
+      <input type="text" name="fullname" required>
+
+      <label>Email Address</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone" required>
+
+      <label>Position Applied For</label>
+      <input type="text" name="position" required>
+
+      <label>Upload Resume (PDF/DOC)</label>
+      <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+
+      <label>Cover Letter (Optional)</label>
+      <textarea name="coverletter" rows="4"></textarea>
+
+      <button type="submit" class="apply-btn">Apply Now</button>
+    </form>
+  </div>
+  <div id="footer-placeholder"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
