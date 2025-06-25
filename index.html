@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="footer.css">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -15,18 +16,29 @@
   
 
   <!-- Hero Carousel -->
-  <section class="carousel">
-    <div class="carousel-slide active">
-      <div class="carousel-text">
-        <h2>Advance</h2>
-        <h1>Laparoscopic <br>Surgery</h1>
+  <section class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Image 1 -->
+      <div class="swiper-slide">
+        <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/Laparoscopic.jpg" alt="Laparoscopic Surgery" />
       </div>
-      <img src="surgery.jpg" alt="Laparoscopic Surgery">
+      <!-- Image 2 -->
+      <div class="swiper-slide">
+        <img src="https://newpanaceahospital.com/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-10-at-13.34.08.jpeg" alt="Another slide" />
+      </div>
+      <!-- image-3 -->
+      <div class="swiper-slide">
+        <img src="https://newpanaceahospital.com/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-10-at-12.10.04.jpeg" alt="Another slide" />
+      </div>
+      <!-- Add more slides as needed -->
     </div>
-    <!-- Future slides go here -->
-    <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
-    <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
+  
+    <!-- Pagination and arrows -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </section>
+  
   <!-- About Us Section -->
 <section class="about-section">
     <div class="about-container">
@@ -205,5 +217,26 @@
 
 
   <script src="script.js"></script>
+  <!-- Swiper JS CDN -->
+<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,             // Enable continuous looping
+    autoplay: {
+      delay: 3000,          // 3 second delay between slides
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
 </body>
 </html>
