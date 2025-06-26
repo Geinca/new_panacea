@@ -111,4 +111,26 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
 
+    .posts,
+    .sidebar {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .widget ul li {
+        font-size: 16px;
+    }
+}
