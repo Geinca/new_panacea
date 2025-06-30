@@ -1,8 +1,8 @@
-/* Base reset */
+/* Reset & Base Styles */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,24 +11,26 @@ body {
     line-height: 1.6;
 }
 
-/* Section container */
+/* Section Styling */
 .video-section {
+    background-color: #fff;
+    padding: 40px 20px;
     max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+    margin: 0 auto;
 }
 
-/* Default grid for desktop/tablet */
+/* Video Grid */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-/* Uniform video styling */
+/* Uniform Video Styling */
 .video-grid video {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16 / 9;
+    /* Ensures all videos have same proportion */
     object-fit: cover;
     border-radius: 8px;
     background-color: #000;
@@ -37,31 +39,12 @@ body {
 }
 
 .video-grid video:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
-/* Responsive tweak: Horizontal scroll on mobile */
+/* Force Single Column on Smaller Devices */
 @media (max-width: 768px) {
     .video-grid {
-        display: flex;
-        flex-direction: column;
-        overflow-x: auto;
-        gap: 15px;
-        padding-bottom: 10px;
-        scroll-snap-type: x mandatory;
-    }
-
-    .video-grid video {
-        flex: 0 0 80%;
-        height: 200px;
-        scroll-snap-align: start;
-    }
-}
-
-/* Narrower screens */
-@media (max-width: 480px) {
-    .video-grid video {
-        flex: 0 0 90%;
-        height: 180px;
+        grid-template-columns: 1fr;
     }
 }
