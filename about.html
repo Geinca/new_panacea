@@ -2,51 +2,249 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>New Panacea Hospital Blog</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="blog.css" />
+  <title>About – New Panacea Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .about-content {
+      display: none;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .about-content.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-content h2 {
+      font-size: 24px;
+      color: #2b2b2b;
+      margin-bottom: 10px;
+    }
+
+    .about-content .subheading {
+      font-size: 15px;
+      color: #0073cc;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .about-content ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: left;
+      max-width: 500px;
+      margin: 0 auto 25px;
+    }
+
+    .about-content ul li {
+      font-size: 15px;
+      margin: 8px 0;
+      padding-left: 20px;
+      position: relative;
+      color: #007c00;
+    }
+
+    .about-content ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #00a000;
+      font-weight: bold;
+    }
+
+    .image-box {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: 30px auto 0;
+      aspect-ratio: 1 / 1;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease 0.3s, transform 1s ease 0.3s;
+    }
+
+    .image-box.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .experience-badge {
+      display: none;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #00a000;
+      color: #fff;
+      padding: 12px 16px;
+      font-size: 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 160, 0, 0.25);
+      text-align: center;
+      z-index: 10;
+      width: fit-content;
+      min-width: 130px;
+    }
+
+    .experience-badge span {
+      font-size: 22px;
+      font-weight: bold;
+      display: block;
+      line-height: 1.2;
+    }
+
+    /* ✅ Desktop view: Image only */
+    @media (min-width: 769px) {
+      .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image-box {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 1s ease;
+        margin: 0;
+      }
+
+      .image-box.show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .about-content {
+        display: none !important;
+      }
+
+      .experience-badge {
+        display: none !important;
+      }
+    }
+
+    /* ✅ Mobile: show badge + text + image animation */
+    @media (max-width: 768px) {
+      .experience-badge {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
 
-   <!-- Header -->
-   <div id="header"></div>
+  <div id="header"></div>
 
-  <!-- Main Content -->
-  <main class="container">
-    <div class="content">
-      <!-- Blog Posts -->
-      <section class="posts">
-        <!-- Single Post Template -->
-        <article class="post">
-          <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/microbiologist-2048x1365.jpg" alt="Microbiology">
-          <div class="info">March 6, 2025 | No Comments</div>
-          <h2>Microbiology</h2>
-          <p>Microbiology is the branch of science that studies microscopic organisms, including bacteria, viruses, fungi, and protozoa. These tiny life forms play a significant role in our environment, health, and industries. From beneficial microbes that help in digestion to harmful pathogens that cause diseases, microbiology is essential for understanding life at a microscopic level. Branches of […]</p>
-          <a href="microbiology.html" class="btn">Read More</a>
-        </article>
+  <section class="about-section">
+    <!-- ✅ Mobile content -->
+    <div class="about-content" id="aboutContent">
+      <h2>We’ll Ensure You Always Get Best Results.</h2>
+      <a href="#" class="subheading">Read our Mission & Vision →</a>
 
-        
+      <p>
+        New Panacea Hospital, located in Debpukur, Barrackpore, is dedicated to providing high-quality healthcare with advanced medical care. We offer a wide range of diagnostics and specialties, including ultrasonography, CT scans, X-rays, ECG, 2D echo, endoscopy, colonoscopy, and echocardiography.
+      </p>
 
-        
-
-    
-      </section>
-
-     
-        
-
-      </aside>
+      <ul>
+        <li>Plastic Surgery</li>
+        <li>General Surgery</li>
+        <li>Breast Cancer Clinic</li>
+        <li>Microbiology</li>
+      </ul>
     </div>
-  </main>
 
-    <!-- Footer -->
-    <div id="footer-placeholder"></div>
+    <!-- ✅ Shared image box -->
+    <div class="image-box" id="imageBox">
+      <img src="https://newpanaceahospital.com/wp-content/uploads/2025/03/microbiologist-scaled.jpg" alt="Microscope">
+      <div class="experience-badge">
+        <span id="expCounter">0</span>
+        Years of Experience
+      </div>
+    </div>
+  </section>
 
-   <!-- JavaScript -->
-   <script src="script.js"></script>
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
 
+  <!-- ✅ Animation and Counter -->
+  <script>
+    function animateCounter(id, target, duration = 3000) {
+      const el = document.getElementById(id);
+      let start = 0;
+      const step = target / (duration / 50);
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) {
+          el.textContent = target;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.round(start);
+        }
+      }, 50);
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const content = document.getElementById("aboutContent");
+      const image = document.getElementById("imageBox");
+
+      // Animate image
+      setTimeout(() => {
+        image.classList.add("show");
+      }, 300);
+
+      // Animate mobile text and badge
+      if (window.innerWidth <= 768) {
+        setTimeout(() => {
+          content.classList.add("show");
+        }, 200);
+
+        setTimeout(() => {
+          animateCounter("expCounter", 15, 3000);
+        }, 1000);
+      }
+    });
+  </script>
 </body>
 </html>

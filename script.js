@@ -26,21 +26,25 @@ if (slides.length > 0) {
 }
 
 // Toggle Mobile Menu
-function toggleMenu() {
-  const navLinks = document.getElementById("nav-links");
-  const menuIcon = document.getElementById("menu-icon");
 
-  navLinks.classList.toggle("show");
 
-  // Toggle icon between bars and cross
-  if (navLinks.classList.contains("show")) {
-    menuIcon.classList.remove("fa-bars");
-    menuIcon.classList.add("fa-times");
-  } else {
-    menuIcon.classList.remove("fa-times");
-    menuIcon.classList.add("fa-bars");
+  function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    const navOverlay = document.getElementById("nav-overlay");
+    const menuIcon = document.getElementById("menu-icon");
+
+    navLinks.classList.toggle("show");
+    navOverlay.classList.toggle("show");
+
+    if (menuIcon) {
+      menuIcon.classList.toggle("fa-bars");
+      menuIcon.classList.toggle("fa-times");
+    }
   }
-}
+
+
+
+
 
 
 // Include Footer

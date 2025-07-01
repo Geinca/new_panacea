@@ -2,137 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>New Panacea Hospital — Departments</title>
+  <title>Departments – New Panacea Hospital</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- FontAwesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-   
-
-    header {
-      background: #00a000;
-      
-      padding: 30px;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
     }
 
     .department-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 1300px;
+      margin: 50px auto;
+      padding: 0 20px;
     }
 
-    .department-box {
-      border: 1px solid #00a000;
-      padding: 30px;
-      text-align: center;
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .col4{
+        height: 100px;
+        width: 180px;
+    }
+    .col2{
+      width: 190px;
+    }
+    .dept-box {
+      width: 150px;
+      height: 140px; /* Slightly horizontal rectangle */
+      border: 2px solid #00b300;
       border-radius: 8px;
-      background: #ffffff;
+      background: #fff;
+      padding: 5px;
+      text-align: center;
+      transition: 0.3s;
       cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    .department-box:hover {
-      background: #e6ffe6;
-      transform: translateY(-2px);
+    .dept-box:hover {
+      background-color: #f4fff4;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 179, 0, 0.15);
     }
 
-    .department-box i {
-      font-size: 2rem;
-      color: #00a000;
+    .dept-box i {
+      font-size: 30px;
+      color: #00b300;
       margin-bottom: 10px;
-      display: block;
     }
 
-    .department-box h3 {
-      font-size: 1rem;
-      color: #0066aa;
-      line-height: 1.3;
+    .dept-box h3 {
+      font-size: 20px;
+      color: #0073cc;
       margin: 0;
-      padding: 0;
+      line-height: 1.4;
+      font-weight: 600;
     }
 
-    @media (max-width: 768px) {
-      .department-box i {
-        font-size: 1.6rem;
+    /* Responsive Layout */
+    @media (max-width: 992px) {
+      .department-container {
+        flex-direction: column;
+        align-items: center;
       }
 
-      .department-box h3 {
-        font-size: 0.9rem;
+      .column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .dept-box {
+        width: 45vw;
+        height: auto;
+        aspect-ratio: 3 / 2;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .dept-box {
+        width: 90vw;
       }
     }
   </style>
 </head>
-
 <body>
   <div id="header"></div>
+  <div class="department-container">
+    <!-- Column 1 -->
+    <div class="column">
+      <div class="dept-box"><i class="fas fa-heart-pulse"></i><h3>General & Laproscopic Surgery</h3></div>
+      <div class="dept-box"><i class="fas fa-circle-notch"></i><h3>Advance Gynecology</h3></div>
+      <div class="dept-box"><i class="fas fa-bone"></i><h3>Hip Joint Replacement</h3></div>
+      <div class="dept-box"><i class="fas fa-head-side-mask"></i><h3>Respiratory Medicine</h3></div>
       
-    
+    </div>
 
+    <!-- Column 2 -->
+    <div class="column">
+      <div class="dept-box col2"><i class="fas fa-tablets"></i><h3>Diabetology, Obesity & Metabolic Disorders</h3></div>
+      <div class="dept-box"><i class="fas fa-user-nurse"></i><h3>Cosmetic Gynecology</h3></div>
+      <div class="dept-box"><i class="fas fa-person-cane"></i><h3>Knee Replacement</h3></div>
+      <div class="dept-box"><i class="fas fa-child"></i><h3>Paediatrics</h3></div>
+      <div class="dept-box"><i class="fas fa-heart"></i><h3>Cardiology Pacemaker Clinic</h3></div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="column">
+      <div class="dept-box"><i class="fas fa-user-doctor"></i><h3>Cardiology & CTVS</h3></div>
+      <div class="dept-box"><i class="fas fa-hand-sparkles"></i><h3>Cosmetic Surgery</h3></div>
+      <div class="dept-box"><i class="fas fa-stethoscope"></i><h3>Surgical Oncology</h3></div>
+      <div class="dept-box"><i class="fas fa-brain"></i><h3>Neurology</h3></div>
+      <div class="dept-box"><i class="fas fa-user-md"></i><h3>E.N.T</h3></div>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="column ">
+      <div class="dept-box col4"><i class="fas fa-heart-circle-check"></i><h3>Nephorology & Dialysis Care</h3></div>
+      <div class="dept-box"><i class="fas fa-solar-panel"></i><h3>Laser Surgery</h3></div>
+      <div class="dept-box"><i class="fas fa-pills"></i><h3>Orthopaedics</h3></div>
+      
+      <div class="dept-box"><i class="fas fa-hospital-user"></i><h3>Oral Maxillo Facial Surgery</h3></div>
+      <div class="dept-box"><i class="fas fa-hand-holding-heart"></i><h3>Urology Oncology</h3></div>
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+  
   
 
-  <section class="department-container">
-    <div class="department-box">
-      <i class="fa-solid fa-heart-pulse"></i>
-      <h3>General &amp; Laparoscopic Surgery</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-notes-medical"></i>
-      <h3>Diabetology, Obesity &amp; Metabolic Disorders</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-user-doctor"></i>
-      <h3>Cardiology &amp; CTVS</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-hand-holding-heart"></i>
-      <h3>Nephrology &amp; Dialysis Care</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-venus"></i>
-      <h3>Advance Gynecology</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-user-doctor"></i>
-      <h3>Cosmetic Gynecology</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-syringe"></i>
-      <h3>Laser Surgery</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-procedures"></i>
-      <h3>Hip Joint Replacement</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-person-cane"></i>
-      <h3>Knee Replacement</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-stethoscope"></i>
-      <h3>Surgical Oncology</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-bone"></i>
-      <h3>Orthopaedics</h3>
-    </div>
-    <div class="department-box">
-      <i class="fa-solid fa-user-doctor"></i>
-      <h3>Neurology</h3>
-    </div>
-    <!-- You can add more departments here as needed -->
-  </section>
-
-  <div id="footer-placeholder"></div>
 
   <script src="script.js"></script>
 </body>

@@ -9,11 +9,13 @@
       <i class="fa-solid fa-location-dot"></i>
       <span>Debpukur, Barrackpore</span>
     </div>
-    <div class="info-block">
+    <div class="info-block phone">
       <i class="fa-solid fa-phone"></i>
-      <span>033-25938794</span>
-      <span>6291140814 </span>
-      <span>8240050422</span>
+      <div class="phone-lines">
+        <span>033-25938794</span>
+        <span>6291140814</span>
+        <span>8240050422</span>
+      </div>
     </div>
     <div class="info-block">
       <i class="fa-regular fa-calendar-check"></i>
@@ -28,10 +30,13 @@
 
 <!-- Navbar -->
 <nav class="navbar">
-  <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
-    <i class="fa fa-bars" id="menu-icon"></i>
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
   </button>
   <ul id="nav-links">
+    <li class="close-btn">
+      <button onclick="toggleMenu()">&times;</button>
+    </li>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="departments.html">Department</a></li>
@@ -44,3 +49,6 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
+
+<!-- Overlay Background -->
+<div id="nav-overlay" onclick="toggleMenu()"></div>
