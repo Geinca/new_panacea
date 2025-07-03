@@ -31,20 +31,15 @@
       flex-direction: column;
       gap: 10px;
     }
-    .col4{
-        height: 100px;
-        width: 180px;
-    }
-    .col2{
-      width: 190px;
-    }
+    
     .dept-box {
-      width: 150px;
-      height: 140px; /* Slightly horizontal rectangle */
+     width: 180px;
+     height: 100px;
+      /* Slightly horizontal rectangle */
       border: 2px solid #00b300;
-      border-radius: 8px;
+      border-radius: 2px;
       background: #fff;
-      padding: 5px;
+      padding: 8px;
       text-align: center;
       transition: 0.3s;
       cursor: pointer;
@@ -54,7 +49,7 @@
       justify-content: center;
       align-items: center;
     }
-
+    
     .dept-box:hover {
       background-color: #f4fff4;
       transform: translateY(-4px);
@@ -64,17 +59,23 @@
     .dept-box i {
       font-size: 30px;
       color: #00b300;
-      margin-bottom: 10px;
+      padding: 5px;
+      
     }
 
     .dept-box h3 {
-      font-size: 20px;
+      font-size: 16px;
       color: #0073cc;
       margin: 0;
-      line-height: 1.4;
+      line-height: 1.6;
       font-weight: 600;
     }
-
+    .col2{
+         height: 130px;
+    }
+    .box5{
+      height: 130px;
+    }
     /* Responsive Layout */
     @media (max-width: 992px) {
       .department-container {
@@ -107,20 +108,20 @@
   <div class="department-container">
     <!-- Column 1 -->
     <div class="column">
-      <div class="dept-box"><i class="fas fa-heart-pulse"></i><h3>General & Laproscopic Surgery</h3></div>
-      <div class="dept-box"><i class="fas fa-circle-notch"></i><h3>Advance Gynecology</h3></div>
-      <div class="dept-box"><i class="fas fa-bone"></i><h3>Hip Joint Replacement</h3></div>
-      <div class="dept-box"><i class="fas fa-head-side-mask"></i><h3>Respiratory Medicine</h3></div>
+      <div class="dept-box box1"><i class="fas fa-heart-pulse"></i><h3>General & <br>Laproscopic Surgery</h3></div>
+      <div class="dept-box box2"><i class="fas fa-circle-notch"></i><h3>Advance Gynecology</h3></div>
+      <div class="dept-box box3 "><i class="fas fa-bone"></i><h3>Hip Joint <br> Replacement</h3></div>
+      <div class="dept-box box4"><i class="fas fa-head-side-mask"></i><h3>Respiratory  <br>Medicine</h3></div>
       
     </div>
 
     <!-- Column 2 -->
     <div class="column">
-      <div class="dept-box col2"><i class="fas fa-tablets"></i><h3>Diabetology, Obesity & Metabolic Disorders</h3></div>
-      <div class="dept-box"><i class="fas fa-user-nurse"></i><h3>Cosmetic Gynecology</h3></div>
+      <div class="dept-box col2"><i class="fas fa-tablets"></i><h3>Diabetology, Obesity  <br>& Metabolic <br> Disorders</h3></div>
+      <div class="dept-box"><i class="fas fa-user-nurse"></i><h3>Cosmetic  <br>Gynecology</h3></div>
       <div class="dept-box"><i class="fas fa-person-cane"></i><h3>Knee Replacement</h3></div>
       <div class="dept-box"><i class="fas fa-child"></i><h3>Paediatrics</h3></div>
-      <div class="dept-box"><i class="fas fa-heart"></i><h3>Cardiology Pacemaker Clinic</h3></div>
+      <div class="dept-box"><i class="fas fa-heart"></i><h3>Cardiology  <br>Pacemaker Clinic</h3></div>
     </div>
 
     <!-- Column 3 -->
@@ -134,11 +135,11 @@
 
     <!-- Column 4 -->
     <div class="column ">
-      <div class="dept-box col4"><i class="fas fa-heart-circle-check"></i><h3>Nephorology & Dialysis Care</h3></div>
+      <div class="dept-box col4"><i class="fas fa-heart-circle-check"></i><h3>Nephorology &  <br>Dialysis Care</h3></div>
       <div class="dept-box"><i class="fas fa-solar-panel"></i><h3>Laser Surgery</h3></div>
       <div class="dept-box"><i class="fas fa-pills"></i><h3>Orthopaedics</h3></div>
       
-      <div class="dept-box"><i class="fas fa-hospital-user"></i><h3>Oral Maxillo Facial Surgery</h3></div>
+      <div class="dept-box box5"><i class="fas fa-hospital-user"></i><h3>Oral Maxillo Facial Surgery</h3></div>
       <div class="dept-box"><i class="fas fa-hand-holding-heart"></i><h3>Urology Oncology</h3></div>
     </div>
   </div>
